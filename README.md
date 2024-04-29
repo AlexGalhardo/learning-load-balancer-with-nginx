@@ -35,7 +35,7 @@ node start-get-rest-postgres-api-ddos-attack.mjs
 node start-post-signup-rest-postgres-api-ddos-attack.mjs
 ```
 
-4. See responses (reports) in [responses/](./responses/)
+See DDoS Attack Responses (reports) in [responses/](./responses/) folder
 
 ## License
 
