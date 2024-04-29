@@ -24,9 +24,15 @@ git clone git@github.com:AlexGalhardo/learning-load-balance-with-nginx.git
 sudo docker-compose up --build -d
 ```
 
-3. Start DDoS Attack
+## DDoS Attacks
+- To test rest-postgres-api GET http://localhost/ endpoint
 ```
-node start-ddos-attack.mjs
+node start-get-rest-postgres-api-ddos-attack.mjs
+```
+
+- To test rest-postgres-api POST http://localhost/signup endpoint
+```
+node start-post-signup-rest-postgres-api-ddos-attack.mjs
 ```
 
 4. See responses (reports) in [responses/](./responses/)
