@@ -7,18 +7,25 @@ services:
     restart: unless-stopped
     ports:
       - "6379:6379"
+    networks:
+      - network
 
   postgres:
-    container_name: k6-postgres
-    image: postgres
+    image: postgres:latest
+    container_name: postgres
     environment:
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: k6-postgres
+      POSTGRES_DB: postgres
     ports:
       - 5432:5432
+    volumes:
+      - postgres:/var/lib/postgresql
+    networks:
+      - network
 
   nginx:
     image: nginx:latest
+    container_name: nginx
     ports:
       - "80:80"
     volumes:
@@ -32,37 +39,64 @@ services:
       - rest-postgres-api-3
 
   graphql-redis-api-1:
+    container_name: graphql-redis-api-1
     build:
       context: ./graphql-redis-api-1
     ports:
       - "3001:3000"
+    networks:
+      - network
 
   graphql-redis-api-2:
+    container_name: graphql-redis-api-2
     build:
       context: ./graphql-redis-api-2
     ports:
       - "3002:3000"
+    networks:
+      - network
 
   graphql-redis-api-3:
+    container_name: graphql-redis-api-3
     build:
       context: ./graphql-redis-api-3
     ports:
       - "3003:3000"
+    networks:
+      - network
   
   rest-postgres-api-1:
+    container_name: rest-postgres-api-1
     build:
       context: ./rest-postgres-api-1
     ports:
       - "4001:3333"
+    networks:
+      - network
 
   rest-postgres-api-2:
+    container_name: rest-postgres-api-2
     build:
       context: ./rest-postgres-api-2
     ports:
       - "4002:3333"
+    networks:
+      - network
 
   rest-postgres-api-3:
+    container_name: rest-postgres-api-3
     build:
       context: ./rest-postgres-api-3
     ports:
       - "4003:3333"
+    networks:
+      - network
+
+
+networks:
+  network:
+    driver: bridge
+
+volumes:
+  postgres:
+    driver: local

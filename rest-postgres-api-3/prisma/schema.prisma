@@ -2,18 +2,14 @@ generator client {
   provider = "prisma-client-js"
 }
 
-datasource db {
-  // provider = "mongodb"
-  // url      = env("MONGO_URL")
-
+datasource db {  
   provider = "postgresql"
   url      = env("POSTGRES_URL")
 }
 
 model Users {
-  id       String @id @default(uuid()) // postgres
-  // id       String @id @default(uuid()) @map("_id") // mongodb
-  name     String
+  id       String @id @default(uuid())
+    name     String
   email    String @unique
   password String
 
@@ -24,9 +20,8 @@ model Users {
 }
 
 model Products {
-  id    String @id @default(uuid()) // postgres
-  // id       String @id @default(uuid()) @map("_id") // mongodb
-  name  String
+  id    String @id @default(uuid())
+    name  String
   stock Int
 
   created_at DateTime @default(now())
@@ -36,9 +31,8 @@ model Products {
 }
 
 model CheckoutLogs {
-  id          String @id @default(uuid()) // postgres
-  // id       String @id @default(uuid()) @map("_id") // mongodb
-  user_id     String
+  id          String @id @default(uuid())
+    user_id     String
   user_email  String
   product_id  String
   product_sku String @unique

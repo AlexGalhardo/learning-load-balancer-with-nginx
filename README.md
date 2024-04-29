@@ -6,6 +6,8 @@
 
 - A personal project I created to learn and improve my skills in:
   - [NGINX](https://www.nginx.com/)
+  - [Docker & Docker Compose](https://www.docker.com/)
+  - [DockerHub](https://hub.docker.com/)
   - Reverse Proxy
   - Web Server
   - Performance Benchmarks
@@ -24,10 +26,10 @@ sudo docker-compose up --build -d
 
 3. Start DDoS Attack
 ```
-node start-ddos-attack.js
+node start-ddos-attack.mjs
 ```
 
-4. See responses in [responses/](./responses/)
+4. See responses (reports) in [responses/](./responses/)
 
 ## License
 

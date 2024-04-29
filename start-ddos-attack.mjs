@@ -2,7 +2,28 @@ import cluster from 'cluster'
 import * as os from 'os'
 let numWorkers = os.cpus().length;
 import fs from 'fs'
-import fetch from 'node-fetch'
+import path from 'path'
+
+function deleteFilesInFolder(folderPath) {
+    fs.readdir(folderPath, (err, files) => {
+        if (err) {
+            console.error('Error reading directory:', err);
+            return;
+        }
+        files.forEach(file => {
+            const filePath = path.join(folderPath, file);
+            fs.unlink(filePath, err => {
+                if (err) {
+                    console.error('Error deleting file:', filePath, err);
+                } else {
+                    console.log('Deleted file:', filePath);
+                }
+            });
+        });
+    });
+}
+deleteFilesInFolder('./responses/');
+
 
 const listEndpointsToAttack = [
 	// rest-postgres-api
@@ -55,7 +76,6 @@ if (cluster.isPrimary) {
 
 			const request = {
 				endpoint: null,
-				http_status_code_response: null,
 				response: null
 			}
 
@@ -70,7 +90,7 @@ if (cluster.isPrimary) {
 					.then((response) => {
 						if (response.status === 200) {
 							workerJobStatistics.total_requests_http_status_code_200 += 1
-							request.http_status_code_response = response.status
+							request.status_code = response.status
 							request.endpoint = response.url
 						}
 						return response
@@ -78,7 +98,6 @@ if (cluster.isPrimary) {
 					.then(response => response.json())
 					.then(response => {
 						if (response) {
-							request.response_success = response.success
 							request.response = response
 						}
 						return response

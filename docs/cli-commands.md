@@ -13,6 +13,11 @@ docker-compose down --remove-orphans
 sudo docker build -t graphql-redis-api-1 .
 ```
 
+## Docker error getting credentials - err: exit status 1, out: ``
+```
+rm ~/.docker/config.json
+```
+
 ## Delete all .git recursively
 ```
 find . -type d -name ".git" -exec rm -rf {} +
