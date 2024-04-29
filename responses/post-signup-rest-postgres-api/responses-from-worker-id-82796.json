@@ -1,0 +1,310 @@
+{
+    "worker_id": 82796,
+    "worker_execution_time": "0.046 seconds",
+    "total_requests_made": 20,
+    "total_requests_timeout": 0,
+    "total_requests_http_status_code_201": 20,
+    "total_requests_fail": 0,
+    "responses": [
+        {
+            "endpoint": "http://localhost/signup",
+            "response": {
+                "success": true,
+                "server": "rest_postgres_api_1",
+                "user": {
+                    "id": "1b4e3c3f-35e7-4b8e-80b1-74e43bebb030",
+                    "name": "Daniel Taylor",
+                    "email": "c4mumfk65o@example.com",
+                    "password": "$2b$12$bHS9j4kuXL68zra5CrEM.uRpJeh6qj/A9QNCiNr0pkFO3KmiFm2uS",
+                    "created_at": "2024-04-29T21:24:28.041Z",
+                    "updated_at": "2024-04-29T21:24:28.041Z"
+                }
+            }
+        },
+        {
+            "endpoint": "http://localhost/signup",
+            "response": {
+                "success": true,
+                "server": "rest_postgres_api_2",
+                "user": {
+                    "id": "4d02abe0-fa73-4f5b-a1a9-cc81194b1d28",
+                    "name": "Isabella Jones",
+                    "email": "jkan23tk6d@example.com",
+                    "password": "$2b$12$TcWOkxPuHPo0aADfpnqhieCFWiVTLWjGpTMMv.azU8kMaciK7F0bO",
+                    "created_at": "2024-04-29T21:24:28.057Z",
+                    "updated_at": "2024-04-29T21:24:28.057Z"
+                }
+            }
+        },
+        {
+            "endpoint": "http://localhost/signup",
+            "response": {
+                "success": true,
+                "server": "rest_postgres_api_2",
+                "user": {
+                    "id": "77754364-7658-4d7a-9852-3ccc2682457a",
+                    "name": "Sophia Martinez",
+                    "email": "kldv5t0kso@example.com",
+                    "password": "$2b$12$jpDaHZ8Q8Pi693KQABsRhOEYqWtedU2H9uWvOrz9KMgfPe6RVU1Xi",
+                    "created_at": "2024-04-29T21:24:28.969Z",
+                    "updated_at": "2024-04-29T21:24:28.969Z"
+                }
+            }
+        },
+        {
+            "endpoint": "http://localhost/signup",
+            "response": {
+                "success": true,
+                "server": "rest_postgres_api_1",
+                "user": {
+                    "id": "1eda7e0d-a555-4d37-ace9-333ca39419f5",
+                    "name": "William Johnson",
+                    "email": "21dyqgoukj@example.com",
+                    "password": "$2b$12$vVvy9CxJvyjxXocpWD5AWuO0wvTkCf.FEr0k8WanOKmbw0BIyBGhW",
+                    "created_at": "2024-04-29T21:24:28.979Z",
+                    "updated_at": "2024-04-29T21:24:28.979Z"
+                }
+            }
+        },
+        {
+            "endpoint": "http://localhost/signup",
+            "response": {
+                "success": true,
+                "server": "rest_postgres_api_1",
+                "user": {
+                    "id": "414b3e3f-6880-4f09-84f4-0ae6858f51da",
+                    "name": "Charlotte Smith",
+                    "email": "vqf2yv8dru@example.com",
+                    "password": "$2b$12$H.CMGczZSafXNMoK.Zvydu/sSuB5zenkaRyN4htI499CdX8COnFWW",
+                    "created_at": "2024-04-29T21:24:29.231Z",
+                    "updated_at": "2024-04-29T21:24:29.231Z"
+                }
+            }
+        },
+        {
+            "endpoint": "http://localhost/signup",
+            "response": {
+                "success": true,
+                "server": "rest_postgres_api_3",
+                "user": {
+                    "id": "c17558ba-d3e5-43d8-bff1-2bc9a8ecccc6",
+                    "name": "James Taylor",
+                    "email": "vqf0fo0j52@example.com",
+                    "password": "$2b$12$AXEj8hGbRh149vpx.D8RfuESv7tWp2qBtWklXtO9DkCnj3xq1B/w.",
+                    "created_at": "2024-04-29T21:24:29.915Z",
+                    "updated_at": "2024-04-29T21:24:29.915Z"
+                }
+            }
+        },
+        {
+            "endpoint": "http://localhost/signup",
+            "response": {
+                "success": true,
+                "server": "rest_postgres_api_1",
+                "user": {
+                    "id": "eb7ac669-e98f-4c28-b352-3925071208ad",
+                    "name": "Emma Garcia",
+                    "email": "ggur4u2pg2@example.com",
+                    "password": "$2b$12$ebSfNwFs7BQ5m.WoblToOeQ5qOWiB/LOAN891Ra9i350Y/GWHm4qm",
+                    "created_at": "2024-04-29T21:24:30.140Z",
+                    "updated_at": "2024-04-29T21:24:30.140Z"
+                }
+            }
+        },
+        {
+            "endpoint": "http://localhost/signup",
+            "response": {
+                "success": true,
+                "server": "rest_postgres_api_3",
+                "user": {
+                    "id": "6d7e5d16-3a7b-4e49-814b-47a238804da7",
+                    "name": "Benjamin Jones",
+                    "email": "3xdzlhdc3q@example.com",
+                    "password": "$2b$12$Hlumzs.LBkOhKM38vdgU5eSlrKyhhlG7qWHfLGni60cXq5nSAO6q2",
+                    "created_at": "2024-04-29T21:24:30.251Z",
+                    "updated_at": "2024-04-29T21:24:30.251Z"
+                }
+            }
+        },
+        {
+            "endpoint": "http://localhost/signup",
+            "response": {
+                "success": true,
+                "server": "rest_postgres_api_1",
+                "user": {
+                    "id": "3ec1a34c-84f8-435f-a8eb-5e5b3b3d9de8",
+                    "name": "John Johnson",
+                    "email": "4qk85bbimi@example.com",
+                    "password": "$2b$12$Yh0CkBy9JQ7paS0wSdqoMOzh/uc6xkfizlJ.f9MhNhvPKB9N0HFIi",
+                    "created_at": "2024-04-29T21:24:30.585Z",
+                    "updated_at": "2024-04-29T21:24:30.585Z"
+                }
+            }
+        },
+        {
+            "endpoint": "http://localhost/signup",
+            "response": {
+                "success": true,
+                "server": "rest_postgres_api_3",
+                "user": {
+                    "id": "c52d41f7-4602-4477-87fb-44052fcd3910",
+                    "name": "Jacob Johnson",
+                    "email": "em88sorxl1@example.com",
+                    "password": "$2b$12$i9/VfIur/vdliBbStHKbsOqO6nJVmkU2IW/6kxNXLkY2tgJ13CI/y",
+                    "created_at": "2024-04-29T21:24:30.774Z",
+                    "updated_at": "2024-04-29T21:24:30.774Z"
+                }
+            }
+        },
+        {
+            "endpoint": "http://localhost/signup",
+            "response": {
+                "success": true,
+                "server": "rest_postgres_api_2",
+                "user": {
+                    "id": "18fde4bc-5877-4168-86e3-84a42aa71e62",
+                    "name": "Evelyn Smith",
+                    "email": "ae77iuur0u@example.com",
+                    "password": "$2b$12$YIPIircRQelia.RpMbuzve3J1SrLy7dewO72p/wToRy4J5564jsNi",
+                    "created_at": "2024-04-29T21:24:30.994Z",
+                    "updated_at": "2024-04-29T21:24:30.994Z"
+                }
+            }
+        },
+        {
+            "endpoint": "http://localhost/signup",
+            "response": {
+                "success": true,
+                "server": "rest_postgres_api_2",
+                "user": {
+                    "id": "0504deee-26b0-4b97-a218-e02ed000585d",
+                    "name": "Michael Harris",
+                    "email": "fx4rxzb93v@example.com",
+                    "password": "$2b$12$Tc2XhAFCj0AR5eQRJfRNe.xyjrgeaN1KEZa9SA1E1BLTYQDYtmdfO",
+                    "created_at": "2024-04-29T21:24:31.249Z",
+                    "updated_at": "2024-04-29T21:24:31.249Z"
+                }
+            }
+        },
+        {
+            "endpoint": "http://localhost/signup",
+            "response": {
+                "success": true,
+                "server": "rest_postgres_api_2",
+                "user": {
+                    "id": "2f66fbb9-366b-4bb1-929c-626dfe243b6c",
+                    "name": "Michael Jackson",
+                    "email": "wz6u7u07wr@example.com",
+                    "password": "$2b$12$iUVxET1gKROzAfdAVylcn.IPsxC/4bK9ENJvR4.Xf7E92/pVU6x3W",
+                    "created_at": "2024-04-29T21:24:31.307Z",
+                    "updated_at": "2024-04-29T21:24:31.307Z"
+                }
+            }
+        },
+        {
+            "endpoint": "http://localhost/signup",
+            "response": {
+                "success": true,
+                "server": "rest_postgres_api_3",
+                "user": {
+                    "id": "675a46fb-9c98-442c-a713-258c35e44f76",
+                    "name": "Benjamin White",
+                    "email": "ego6cpk3py@example.com",
+                    "password": "$2b$12$FQKA9hO2XfbUTwu96qeyie/BMJHmv5300p9bMIIZBhl2PeQjNpQPm",
+                    "created_at": "2024-04-29T21:24:31.640Z",
+                    "updated_at": "2024-04-29T21:24:31.640Z"
+                }
+            }
+        },
+        {
+            "endpoint": "http://localhost/signup",
+            "response": {
+                "success": true,
+                "server": "rest_postgres_api_3",
+                "user": {
+                    "id": "f387183a-5da6-433f-8f29-54a38db7df8c",
+                    "name": "Michael Harris",
+                    "email": "59vi39rxew@example.com",
+                    "password": "$2b$12$/YbR/jfCwSxxi2Wa.N6IhehvpA0VaW1DpZsAhu2i5X6fPF/CoFwRC",
+                    "created_at": "2024-04-29T21:24:32.097Z",
+                    "updated_at": "2024-04-29T21:24:32.097Z"
+                }
+            }
+        },
+        {
+            "endpoint": "http://localhost/signup",
+            "response": {
+                "success": true,
+                "server": "rest_postgres_api_2",
+                "user": {
+                    "id": "604e431a-f85e-41b2-a8f3-7500006ca427",
+                    "name": "James Taylor",
+                    "email": "ue5i2fleuf@example.com",
+                    "password": "$2b$12$1Hda6wxRmcELy3tOWZA1aeTByBzh3zG3H0tK/NnKWzIpOj7/PfHAe",
+                    "created_at": "2024-04-29T21:24:33.120Z",
+                    "updated_at": "2024-04-29T21:24:33.120Z"
+                }
+            }
+        },
+        {
+            "endpoint": "http://localhost/signup",
+            "response": {
+                "success": true,
+                "server": "rest_postgres_api_2",
+                "user": {
+                    "id": "f7ef429e-5b87-4cbb-8d1b-94b04f22baa2",
+                    "name": "James Williams",
+                    "email": "fj74hgnrya@example.com",
+                    "password": "$2b$12$qQQbnlXMyamOmTahc3tK5.tnvDzLHJTsDAPwlUZ5iYGybaXY2qMAm",
+                    "created_at": "2024-04-29T21:24:33.218Z",
+                    "updated_at": "2024-04-29T21:24:33.218Z"
+                }
+            }
+        },
+        {
+            "endpoint": "http://localhost/signup",
+            "response": {
+                "success": true,
+                "server": "rest_postgres_api_1",
+                "user": {
+                    "id": "b972d8e2-f0b8-422d-8047-77f5aef760a9",
+                    "name": "Ethan Davis",
+                    "email": "ri5grvxmrn@example.com",
+                    "password": "$2b$12$RSFodG3mdG8N6eDQIpMsneXla5vB.jFGMasOiiWDUhzBA/T7Gkw1a",
+                    "created_at": "2024-04-29T21:24:33.219Z",
+                    "updated_at": "2024-04-29T21:24:33.219Z"
+                }
+            }
+        },
+        {
+            "endpoint": "http://localhost/signup",
+            "response": {
+                "success": true,
+                "server": "rest_postgres_api_2",
+                "user": {
+                    "id": "bee05a1a-3ee8-4c6e-8434-170879d252aa",
+                    "name": "Emma Jones",
+                    "email": "25354c401u@example.com",
+                    "password": "$2b$12$YoMh8gLLz8bQYzd5lTodDu3D6BDG3.Hci3RTlXlRWZRZWXPnuQJEi",
+                    "created_at": "2024-04-29T21:24:34.043Z",
+                    "updated_at": "2024-04-29T21:24:34.043Z"
+                }
+            }
+        },
+        {
+            "endpoint": "http://localhost/signup",
+            "response": {
+                "success": true,
+                "server": "rest_postgres_api_2",
+                "user": {
+                    "id": "e48fe713-0df3-42d1-a159-e9a9d5a6cb68",
+                    "name": "Emma Jones",
+                    "email": "gkkzpbbomj@example.com",
+                    "password": "$2b$12$yxkNCd8YT5buHh20QeEi3OBAPRXW2TvrXR65ICYbpc.wpz5NhtWLS",
+                    "created_at": "2024-04-29T21:24:34.486Z",
+                    "updated_at": "2024-04-29T21:24:34.486Z"
+                }
+            }
+        }
+    ]
+}

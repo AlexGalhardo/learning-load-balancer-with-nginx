@@ -1,4 +1,4 @@
-POST http://localhost:3333/create-user
+POST http://localhost:3333/signup
 content-type: application/json
 
 {

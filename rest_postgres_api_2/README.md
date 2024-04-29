@@ -62,7 +62,7 @@ curl --request POST \
 
 ```bash
 curl --request POST \
-    --url http://localhost:3333/create-user \
+    --url http://localhost:3333/signup \
     --header 'Content-Type: application/json' \
     --data '{ "name":"cURL Test Name", "email":"curl.test.name@gmail.com", "password":"qwe123BR@qwe123BR@" }'
 ```

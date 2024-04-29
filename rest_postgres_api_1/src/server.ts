@@ -19,7 +19,7 @@ app
       server: 'rest_postgres_api_1'
     })
   })
-  .post('/create-user', async (req, res) => {
+  .post('/signup', async (req, res) => {
     try {
       const { name, email, password } = await valiteUserSchema(req.body)
 

@@ -1,190 +1,170 @@
 {
-    "worker_id": 47659,
-    "worker_execution_time": "0.053 seconds",
+    "worker_id": 77686,
+    "worker_execution_time": "0.046 seconds",
     "total_requests_made": 20,
     "total_requests_timeout": 0,
     "total_requests_http_status_code_200": 20,
     "total_requests_fail": 0,
     "responses": [
         {
-            "endpoint": "http://localhost/",
+            "endpoint": "http://localhost",
             "response": {
                 "success": true,
                 "message": "Lets gooo!",
                 "server": "rest_postgres_api_2"
-            },
-            "status_code": 200
+            }
         },
         {
-            "endpoint": "http://localhost/",
+            "endpoint": "http://localhost",
             "response": {
                 "success": true,
                 "message": "Lets gooo!",
                 "server": "rest_postgres_api_3"
-            },
-            "status_code": 200
+            }
         },
         {
-            "endpoint": "http://localhost/",
-            "response": {
-                "success": true,
-                "message": "Lets gooo!",
-                "server": "rest_postgres_api_2"
-            },
-            "status_code": 200
-        },
-        {
-            "endpoint": "http://localhost/",
+            "endpoint": "http://localhost",
             "response": {
                 "success": true,
                 "message": "Lets gooo!",
                 "server": "rest_postgres_api_3"
-            },
-            "status_code": 200
+            }
         },
         {
-            "endpoint": "http://localhost/",
-            "response": {
-                "success": true,
-                "message": "Lets gooo!",
-                "server": "rest_postgres_api_2"
-            },
-            "status_code": 200
-        },
-        {
-            "endpoint": "http://localhost/",
-            "response": {
-                "success": true,
-                "message": "Lets gooo!",
-                "server": "rest_postgres_api_1"
-            },
-            "status_code": 200
-        },
-        {
-            "endpoint": "http://localhost/",
-            "response": {
-                "success": true,
-                "message": "Lets gooo!",
-                "server": "rest_postgres_api_1"
-            },
-            "status_code": 200
-        },
-        {
-            "endpoint": "http://localhost/",
+            "endpoint": "http://localhost",
             "response": {
                 "success": true,
                 "message": "Lets gooo!",
                 "server": "rest_postgres_api_3"
-            },
-            "status_code": 200
+            }
         },
         {
-            "endpoint": "http://localhost/",
+            "endpoint": "http://localhost",
             "response": {
                 "success": true,
                 "message": "Lets gooo!",
                 "server": "rest_postgres_api_2"
-            },
-            "status_code": 200
+            }
         },
         {
-            "endpoint": "http://localhost/",
+            "endpoint": "http://localhost",
+            "response": {
+                "success": true,
+                "message": "Lets gooo!",
+                "server": "rest_postgres_api_2"
+            }
+        },
+        {
+            "endpoint": "http://localhost",
+            "response": {
+                "success": true,
+                "message": "Lets gooo!",
+                "server": "rest_postgres_api_2"
+            }
+        },
+        {
+            "endpoint": "http://localhost",
             "response": {
                 "success": true,
                 "message": "Lets gooo!",
                 "server": "rest_postgres_api_1"
-            },
-            "status_code": 200
+            }
         },
         {
-            "endpoint": "http://localhost/",
+            "endpoint": "http://localhost",
+            "response": {
+                "success": true,
+                "message": "Lets gooo!",
+                "server": "rest_postgres_api_1"
+            }
+        },
+        {
+            "endpoint": "http://localhost",
             "response": {
                 "success": true,
                 "message": "Lets gooo!",
                 "server": "rest_postgres_api_3"
-            },
-            "status_code": 200
+            }
         },
         {
-            "endpoint": "http://localhost/",
+            "endpoint": "http://localhost",
+            "response": {
+                "success": true,
+                "message": "Lets gooo!",
+                "server": "rest_postgres_api_2"
+            }
+        },
+        {
+            "endpoint": "http://localhost",
+            "response": {
+                "success": true,
+                "message": "Lets gooo!",
+                "server": "rest_postgres_api_2"
+            }
+        },
+        {
+            "endpoint": "http://localhost",
+            "response": {
+                "success": true,
+                "message": "Lets gooo!",
+                "server": "rest_postgres_api_2"
+            }
+        },
+        {
+            "endpoint": "http://localhost",
             "response": {
                 "success": true,
                 "message": "Lets gooo!",
                 "server": "rest_postgres_api_1"
-            },
-            "status_code": 200
+            }
         },
         {
-            "endpoint": "http://localhost/",
+            "endpoint": "http://localhost",
+            "response": {
+                "success": true,
+                "message": "Lets gooo!",
+                "server": "rest_postgres_api_2"
+            }
+        },
+        {
+            "endpoint": "http://localhost",
+            "response": {
+                "success": true,
+                "message": "Lets gooo!",
+                "server": "rest_postgres_api_2"
+            }
+        },
+        {
+            "endpoint": "http://localhost",
             "response": {
                 "success": true,
                 "message": "Lets gooo!",
                 "server": "rest_postgres_api_3"
-            },
-            "status_code": 200
+            }
         },
         {
-            "endpoint": "http://localhost/",
-            "response": {
-                "success": true,
-                "message": "Lets gooo!",
-                "server": "rest_postgres_api_2"
-            },
-            "status_code": 200
-        },
-        {
-            "endpoint": "http://localhost/",
+            "endpoint": "http://localhost",
             "response": {
                 "success": true,
                 "message": "Lets gooo!",
                 "server": "rest_postgres_api_1"
-            },
-            "status_code": 200
+            }
         },
         {
-            "endpoint": "http://localhost/",
+            "endpoint": "http://localhost",
             "response": {
                 "success": true,
                 "message": "Lets gooo!",
                 "server": "rest_postgres_api_1"
-            },
-            "status_code": 200
+            }
         },
         {
-            "endpoint": "http://localhost/",
+            "endpoint": "http://localhost",
             "response": {
                 "success": true,
                 "message": "Lets gooo!",
-                "server": "rest_postgres_api_2"
-            },
-            "status_code": 200
-        },
-        {
-            "endpoint": "http://localhost/",
-            "response": {
-                "success": true,
-                "message": "Lets gooo!",
-                "server": "rest_postgres_api_2"
-            },
-            "status_code": 200
-        },
-        {
-            "endpoint": "http://localhost/",
-            "response": {
-                "success": true,
-                "message": "Lets gooo!",
-                "server": "rest_postgres_api_2"
-            },
-            "status_code": 200
-        },
-        {
-            "endpoint": "http://localhost/",
-            "response": {
-                "success": true,
-                "message": "Lets gooo!",
-                "server": "rest_postgres_api_1"
-            },
-            "status_code": 200
+                "server": "rest_postgres_api_3"
+            }
         }
     ]
 }

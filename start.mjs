@@ -2,34 +2,27 @@ import cluster from 'cluster'
 import * as os from 'os'
 let numWorkers = os.cpus().length;
 import fs from 'fs'
-import path from 'path'
-
-function deleteFilesInFolder(folderPath) {
-    fs.readdir(folderPath, (err, files) => {
-        if (err) {
-            console.error('Error reading directory:', err);
-            return;
-        }
-        files.forEach(file => {
-            const filePath = path.join(folderPath, file);
-            fs.unlink(filePath, err => {
-                if (err) {
-                    console.error('Error deleting file:', filePath, err);
-                } else {
-                    console.log('Deleted file:', filePath);
-                }
-            });
-        });
-    });
-}
-deleteFilesInFolder('./responses/');
-
 
 const listEndpointsToAttack = [
-	// rest-postgres-api
-	'http://localhost',
+	// https://jsonplaceholder.typicode.com/users
+	'https://jsonplaceholder.typicode.com/users/1',
+	'https://jsonplaceholder.typicode.com/users/2',
+	'https://jsonplaceholder.typicode.com/users/3',
 
-	// graphql-redis-api
+	// https://jsonplaceholder.typicode.com/posts
+	'https://jsonplaceholder.typicode.com/posts/1',
+	'https://jsonplaceholder.typicode.com/posts/2',
+	'https://jsonplaceholder.typicode.com/posts/3',
+
+	// https://jsonplaceholder.typicode.com/comments
+	'https://jsonplaceholder.typicode.com/comments/1',
+	'https://jsonplaceholder.typicode.com/comments/2',
+	'https://jsonplaceholder.typicode.com/comments/3',
+
+	// https://jsonplaceholder.typicode.com/todos
+	'https://jsonplaceholder.typicode.com/todos/1',
+	'https://jsonplaceholder.typicode.com/todos/2',
+	'https://jsonplaceholder.typicode.com/todos/3'
 ]
 
 if (cluster.isPrimary) {
@@ -50,7 +43,7 @@ if (cluster.isPrimary) {
 	});
 } else {
 
-	let timetaken = `Tempo execução no Worker ID:  ${process.pid}`;
+	let timetaken = `Execution Time Worker ID:  ${process.pid}`;
 
 	let begin = Date.now();
 
@@ -76,6 +69,7 @@ if (cluster.isPrimary) {
 
 			const request = {
 				endpoint: null,
+				http_status_code_response: null,
 				response: null
 			}
 
@@ -90,7 +84,7 @@ if (cluster.isPrimary) {
 					.then((response) => {
 						if (response.status === 200) {
 							workerJobStatistics.total_requests_http_status_code_200 += 1
-							request.status_code = response.status
+							request.http_status_code_response = response.status
 							request.endpoint = response.url
 						}
 						return response
@@ -98,6 +92,7 @@ if (cluster.isPrimary) {
 					.then(response => response.json())
 					.then(response => {
 						if (response) {
+							request.response_success = response.success
 							request.response = response
 						}
 						return response
@@ -134,13 +129,13 @@ if (cluster.isPrimary) {
 
 	let timeSpent = (end - begin) / 1000 + " seconds";
 
-	console.log(`-------> O Worker ID: ${process.pid} processou no total: ${totalRequestsMade} requisições `)
+	console.log(`-------> The Worker ID: ${process.pid} processed total: ${totalRequestsMade} requests `)
 
 	setTimeout(function () {
 		try {
 			const jsonData = JSON.parse(fs.readFileSync(`./responses/responses-from-worker-id-${process.pid}.json`, 'utf-8'));
 			jsonData.worker_execution_time = timeSpent
-			console.log(`--> Tempo execução no Worker ID:  ${process.pid} => `, timeSpent)
+			console.log(`--> Execution Time Worker ID:  ${process.pid} => `, timeSpent)
 			fs.writeFileSync(`./responses/responses-from-worker-id-${process.pid}.json`, JSON.stringify(jsonData, null, 4), 'utf8');
 		} catch (error) {
 			console.log('An error has occurred ', error);
