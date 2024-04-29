@@ -16,7 +16,7 @@ app
     return res.status(200).json({
       success: true,
       message: 'Lets gooo!',
-      server: "rest-postgres-api-2"
+      server: "rest_postgres_api_3"
     })
   })
   .post('/create-user', async (req, res) => {
@@ -34,14 +34,14 @@ app
 
         return res.status(201).json({
           success: true,
-          server: "rest-postgres-api-2",
+          server: "rest_postgres_api_3",
           user
         })
       })
     } catch (error: any) {
       return res.status(406).json({
         success: false,
-        server: "rest-postgres-api-2",
+        server: "rest_postgres_api_3",
         error: error.message
       })
     }
@@ -74,14 +74,14 @@ app
 
         return res.status(200).json({
           success: true,
-          server: "rest-postgres-api-2",
+          server: "rest_postgres_api_3",
           stock
         })
       })
     } catch (error: any) {
       return res.status(406).json({
         success: false,
-        server: "rest-postgres-api-2",
+        server: "rest_postgres_api_3",
         error: error.message
       })
     }

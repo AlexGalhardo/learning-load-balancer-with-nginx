@@ -27,7 +27,7 @@ deleteFilesInFolder('./responses/');
 
 const listEndpointsToAttack = [
 	// rest-postgres-api
-	'http://localhost:3333/',
+	'http://localhost',
 
 	// graphql-redis-api
 ]

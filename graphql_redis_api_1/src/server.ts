@@ -6,21 +6,21 @@ import AuthController from "./controllers/Auth.controller";
 import ToDoController from "./controllers/ToDo.controller";
 
 new Elysia()
-    .use(
-        cors({
-            origin: "*",
-        }),
-    )
-	.get('/', () => {
-		return {
-			success: true,
-			message: 'Hello world',
-			server: 'graphql-redis-api-1'
-		}
-	})
-    .use(
-        apollo({
-            typeDefs: gql`
+  .use(
+    cors({
+      origin: "*",
+    }),
+  )
+  .get('/', () => {
+    return {
+      success: true,
+      message: 'Hello world',
+      server: 'graphql_redis_api_1'
+    }
+  })
+  .use(
+    apollo({
+      typeDefs: gql`
                 type ToDo {
                     id: String
                     user_id: String
@@ -73,37 +73,37 @@ new Elysia()
                     deleteToDo(id: String!): toDoResponse
                 }
             `,
-            resolvers: {
-                Mutation: {
-                    signup: async (_, params) => AuthController.signup(params),
-                    login: async (_, params) => AuthController.login(params),
-                    newToDo: async (_, params, context: { authorization: string }) =>
-                        ToDoController.newToDo(params, context),
-                    updateToDo: async (_, params, context: { authorization: string }) =>
-                        ToDoController.updateToDo(params, context),
-                    deleteToDo: async (_, params, context: { authorization: string }) =>
-                        ToDoController.deleteToDo(params, context),
-                },
-                Query: {
-                    allToDos: async (_, __, context: { authorization: string }) => ToDoController.allToDos(context),
-                    getToDoById: async (_, params, context: { authorization: string }) =>
-                        ToDoController.getToDoById(params, context),
-                },
-            },
-            context: async ({ request }) => {
-                const authorization = request.headers.get("authorization");
-                return {
-                    authorization,
-                };
-            },
-        }),
-    )
-    .derive(({ headers }) => {
-        const auth = headers["authorization"];
+      resolvers: {
+        Mutation: {
+          signup: async (_, params) => AuthController.signup(params),
+          login: async (_, params) => AuthController.login(params),
+          newToDo: async (_, params, context: { authorization: string }) =>
+            ToDoController.newToDo(params, context),
+          updateToDo: async (_, params, context: { authorization: string }) =>
+            ToDoController.updateToDo(params, context),
+          deleteToDo: async (_, params, context: { authorization: string }) =>
+            ToDoController.deleteToDo(params, context),
+        },
+        Query: {
+          allToDos: async (_, __, context: { authorization: string }) => ToDoController.allToDos(context),
+          getToDoById: async (_, params, context: { authorization: string }) =>
+            ToDoController.getToDoById(params, context),
+        },
+      },
+      context: async ({ request }) => {
+        const authorization = request.headers.get("authorization");
         return {
-            authorization: auth?.startsWith("Bearer ") ? auth.slice(8) : "Header authorization token not found",
+          authorization,
         };
-    })
-    .listen(3000, () => {
-        console.log(`🦊 todo-graphql-api-using-redis is running at http://localhost:3000`);
-    });
+      },
+    }),
+  )
+  .derive(({ headers }) => {
+    const auth = headers["authorization"];
+    return {
+      authorization: auth?.startsWith("Bearer ") ? auth.slice(8) : "Header authorization token not found",
+    };
+  })
+  .listen(3000, () => {
+    console.log(`🦊 todo-graphql-api-using-redis is running at http://localhost:3000`);
+  });

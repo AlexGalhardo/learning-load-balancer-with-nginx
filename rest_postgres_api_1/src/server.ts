@@ -12,11 +12,11 @@ const prisma = new PrismaClient({
 
 app
   .use(express.json())
-  .get('/rest', (_req, res) => {
+  .get('/', (_req, res) => {
     return res.status(200).json({
       success: true,
       message: 'Lets gooo!',
-      server: 'rest-postgres-api-1'
+      server: 'rest_postgres_api_1'
     })
   })
   .post('/create-user', async (req, res) => {
@@ -34,14 +34,14 @@ app
 
         return res.status(201).json({
           success: true,
-          server: 'rest-postgres-api-1',
+          server: 'rest_postgres_api_1',
           user
         })
       })
     } catch (error: any) {
       return res.status(406).json({
         success: false,
-        server: 'rest-postgres-api-1',
+        server: 'rest_postgres_api_1',
         error: error.message
       })
     }
@@ -74,14 +74,14 @@ app
 
         return res.status(200).json({
           success: true,
-          server: 'rest-postgres-api-1',
+          server: 'rest_postgres_api_1',
           stock
         })
       })
     } catch (error: any) {
       return res.status(406).json({
         success: false,
-        server: 'rest-postgres-api-1',
+        server: 'rest_postgres_api_1',
         error: error.message
       })
     }

@@ -30,63 +30,65 @@ services:
       - "80:80"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
+    networks:
+      - network
     depends_on:
-      - graphql-redis-api-1
-      - graphql-redis-api-2
-      - graphql-redis-api-3
-      - rest-postgres-api-1
-      - rest-postgres-api-2
-      - rest-postgres-api-3
+      - graphql_redis_api_1
+      - graphql_redis_api_2
+      - graphql_redis_api_3
+      - rest_postgres_api_1
+      - rest_postgres_api_2
+      - rest_postgres_api_3
 
-  graphql-redis-api-1:
-    container_name: graphql-redis-api-1
+  graphql_redis_api_1:
+    container_name: graphql_redis_api_1
     build:
-      context: ./graphql-redis-api-1
+      context: ./graphql_redis_api_1
     ports:
       - "3001:3000"
     networks:
       - network
 
-  graphql-redis-api-2:
-    container_name: graphql-redis-api-2
+  graphql_redis_api_2:
+    container_name: graphql_redis_api_2
     build:
-      context: ./graphql-redis-api-2
+      context: ./graphql_redis_api_2
     ports:
       - "3002:3000"
     networks:
       - network
 
-  graphql-redis-api-3:
-    container_name: graphql-redis-api-3
+  graphql_redis_api_3:
+    container_name: graphql_redis_api_3
     build:
-      context: ./graphql-redis-api-3
+      context: ./graphql_redis_api_3
     ports:
       - "3003:3000"
     networks:
       - network
   
-  rest-postgres-api-1:
-    container_name: rest-postgres-api-1
+  rest_postgres_api_1:
+    container_name: rest_postgres_api_1
     build:
-      context: ./rest-postgres-api-1
+      context: ./rest_postgres_api_1
     ports:
       - "4001:3333"
     networks:
       - network
 
-  rest-postgres-api-2:
-    container_name: rest-postgres-api-2
+  rest_postgres_api_2:
+    container_name: rest_postgres_api_2
     build:
-      context: ./rest-postgres-api-2
+      context: ./rest_postgres_api_2
     ports:
       - "4002:3333"
     networks:
       - network
 
-  rest-postgres-api-3:
-    container_name: rest-postgres-api-3
+  rest_postgres_api_3:
+    container_name: rest_postgres_api_3
     build:
-      context: ./rest-postgres-api-3
+      context: ./rest_postgres_api_3
     ports:
       - "4003:3333"
     networks:
