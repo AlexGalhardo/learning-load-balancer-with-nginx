@@ -1,17 +1,9 @@
 {
-  "name": "nginx_load_balancer",
-  "version": "1.0.0",
-  "description": "<div align=\"center\">   <h1 align=\"center\">Learning Load Balance with NGINX</a> </div>",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
+  "name": "learning-load-balancer-with-nginx",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+	"attack:rest_postgres_api:get": "node run start-get-rest-postgres-api-ddos-attack.mjs",
+    "attack:rest_postgres_api:signup": "node run start-post-signup-rest-postgres-api-ddos-attack.mjs"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3"
   }
