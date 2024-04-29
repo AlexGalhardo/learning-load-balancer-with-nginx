@@ -1,0 +1,62 @@
+{
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.colorTheme": "Omni",
+	"[jsonc]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"workbench.editor.wrapTabs": true,
+	"diffEditor.ignoreTrimWhitespace": false,
+	"workbench.statusBar.visible": true,
+	"explorer.confirmDelete": true,
+	"editor.suggestSelection": "first",
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"editor.formatOnPaste": true,
+	"json.format.keepLines": false,
+	"editor.codeActionsOnSave": {
+		"source.fixAll": "explicit"
+	},
+	"javascript.format.insertSpaceBeforeFunctionParenthesis": false,
+	"javascript.format.placeOpenBraceOnNewLineForControlBlocks": false,
+	"javascript.format.placeOpenBraceOnNewLineForFunctions": false,
+	"typescript.format.insertSpaceBeforeFunctionParenthesis": false,
+	"typescript.format.placeOpenBraceOnNewLineForControlBlocks": false,
+	"typescript.format.placeOpenBraceOnNewLineForFunctions": false,
+	"explorer.confirmDragAndDrop": true,
+	"editor.inlineSuggest.enabled": true,
+	"git.autofetch": true,
+	"css.format.enable": false,
+	"php.validate.enable": false,
+	"editor.insertSpaces": false,
+	"json.format.enable": true,
+	"editor.unicodeHighlight.invisibleCharacters": false,
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"editor.fontSize": 16,
+	"editor.wordWrap": "on",
+	"editor.formatOnSave": true,
+	"files.exclude": {
+		"**/.trunk/*out": true,
+		"**/.trunk/*out/": true,
+		"**/.trunk/*actions/": true,
+		"**/.trunk/*logs/": true,
+		"**/.trunk/*plugins/": true
+	},
+	"files.watcherExclude": {
+		"**/.trunk/*out": true,
+		"**/.trunk/*out/": true,
+		"**/.trunk/*actions/": true,
+		"**/.trunk/*logs/": true,
+		"**/.trunk/*plugins/": true
+	},
+	"errorLens.excludeBySource": [
+		"dockerfile-utils(37)"
+	],
+	"[typescript]": {},
+	"files.associations": {
+		"*.ts": "typescript"
+	},
+	"window.zoomLevel": 1,
+	"workbench.editor.empty.hint": "hidden"
+}

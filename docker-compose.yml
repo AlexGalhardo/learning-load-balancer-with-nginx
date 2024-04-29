@@ -1,0 +1,68 @@
+version: '3'
+
+services:
+  redis:
+    image: redis:latest
+    container_name: redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+
+  postgres:
+    container_name: k6-postgres
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: k6-postgres
+    ports:
+      - 5432:5432
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - graphql-redis-api-1
+      - graphql-redis-api-2
+      - graphql-redis-api-3
+      - rest-postgres-api-1
+      - rest-postgres-api-2
+      - rest-postgres-api-3
+
+  graphql-redis-api-1:
+    build:
+      context: ./graphql-redis-api-1
+    ports:
+      - "3001:3000"
+
+  graphql-redis-api-2:
+    build:
+      context: ./graphql-redis-api-2
+    ports:
+      - "3002:3000"
+
+  graphql-redis-api-3:
+    build:
+      context: ./graphql-redis-api-3
+    ports:
+      - "3003:3000"
+  
+  rest-postgres-api-1:
+    build:
+      context: ./rest-postgres-api-1
+    ports:
+      - "4001:3333"
+
+  rest-postgres-api-2:
+    build:
+      context: ./rest-postgres-api-2
+    ports:
+      - "4002:3333"
+
+  rest-postgres-api-3:
+    build:
+      context: ./rest-postgres-api-3
+    ports:
+      - "4003:3333"

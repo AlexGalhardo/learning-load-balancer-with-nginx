@@ -1,0 +1,8 @@
+POST http://localhost:3000/graphql
+Content-Type: application/json
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwMTc0YjYyOC1lNTEzLTRkYzEtODIwMS04NmQ3ZDdiNDYxMjMiLCJ1c2VyRW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJpYXQiOjE3MTQyNDI0MjUsImV4cCI6MTcxNDI0NjAyNX0.gMiG9gzWVaMf52EpmgQR_5JWKH_Zz_E86ne9OyaHFIM
+
+
+{
+  "query": "query allToDos { allToDos { success message todos { id user_id user_email title done updated_at created_at } } }"
+}

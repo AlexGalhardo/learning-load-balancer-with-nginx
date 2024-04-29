@@ -1,0 +1,13 @@
+POST http://localhost:3000/graphql
+Content-Type: application/json
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwMTc0YjYyOC1lNTEzLTRkYzEtODIwMS04NmQ3ZDdiNDYxMjMiLCJ1c2VyRW1haWwiOiJwZWRyb0BnbWFpbC5jb20iLCJpYXQiOjE3MTQyNDI0MjUsImV4cCI6MTcxNDI0NjAyNX0.gMiG9gzWVaMf52EpmgQR_5JWKH_Zz_E86ne9OyaHFIM
+
+
+{
+  "query": "mutation updateToDo($id: String!, $title: String!, $done: Boolean!) { updateToDo(id: $id, title: $title, done: $done) { success message todo { id user_id user_email title done updated_at created_at } } }",
+  "variables": {
+  	"id": "dda14636-f143-4793-8d03-93d880d1a2f6",
+	"title": "editando para true",
+    "done": true
+  }
+}

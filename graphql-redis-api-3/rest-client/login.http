@@ -1,0 +1,9 @@
+POST http://localhost:3000/form
+Content-Type: "application/json"
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoiYWxlZXhndmllaXJhQGdtYWlsLmNvbSJ9.-H3Psc0mmQe4J82gq16tAp4xZCSxMZgTD2lyD17lZjo
+
+{
+  "username": "alex",
+  "email": "alex@gmail.com",
+  "password": "123456"
+}
